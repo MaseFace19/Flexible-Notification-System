@@ -10,6 +10,7 @@ namespace Notification_Strategies
     {
         static void Main(string[] args)
         {
+            NotificationContext context = new NotificationContext();
             Console.WriteLine("Please select how you would like to recieve your notifications :");
             Console.WriteLine("1) Email");
             Console.WriteLine("2) SMS");
@@ -24,19 +25,19 @@ namespace Notification_Strategies
             }
 
 
-            NotificationContext context = new NotificationContext(new EmailService());
+            
             switch (answer)
             {
                 case 1:
-                    context = new NotificationContext(new EmailService());
+                    context.setNotificationType(new EmailService());
                     break;
 
                 case 2:
-                    context = new NotificationContext(new SmsService());
+                    context.setNotificationType(new SmsService());
                     break;
 
                 case 3:
-                    context = new NotificationContext(new PushService());
+                    context.setNotificationType(new PushService());
                     break;
                 default:
                     break;

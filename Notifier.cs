@@ -11,6 +11,8 @@ namespace Notification_Strategies
         void Notify(string message);
     }
 
+
+
     class EmailService : Notifier
     {
         public EmailService() { }
@@ -47,7 +49,7 @@ namespace Notification_Strategies
     }
 
     ///Kinda understand from here but kinda lost on the prompt shadish
-
+    
 
 
 }

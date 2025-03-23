@@ -10,15 +10,15 @@ namespace Notification_Strategies
     {
         private Notifier noticationType;
 
-        public NotificationContext(Notifier notificationType)
+        public NotificationContext()
         {
-            this.noticationType = notificationType;
+            this.noticationType = null;
         }
 
         //Set notification type
         public void setNotificationType(Notifier notificationType)
         {
-            this.noticationType = noticationType;
+            this.noticationType = notificationType;
         }
 
         //Invoke the selected/current nofication type to send notification
